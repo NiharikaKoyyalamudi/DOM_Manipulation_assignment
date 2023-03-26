@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Manipulations Assignment</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1 style="text-align: center;">Java Script Event Handlers</h1>
+    <h2>Paragraph about Indian cricket Team</h2>
+    <div class="container">
+      
+    <p id="my-paragraph" onmouseover="changeColor('my-paragraph', 'red')" onmouseout="changeColor('my-paragraph', 'black')"><br>India recorded their first Test victory against England at Madras in 1952 and later in the year won their 
+      first Test series (against Pakistan). India were strengthened by the likes of batsmen Polly Umrigar, Vijay Manjrekar and bowler SM Gupte. They continued their good form throughout the early 1950s with a series win against New Zealand in 1956, 
+      however they did not win again in the remainder of the 1950s and lost badly to strong Australian and English sides. The next decade developed India's reputation as a team that is considered unbeatable at home. Although they only won two series (both against New Zealand), 
+      they managed to draw home series against Pakistan, England and Australia. The decade starred the batting performances of Mansoor Ali Khan Pataudi, Dilip Sardesai, Hanumant Singh and Chandu Borde as well as bowling performances from off-spinner EAS Prasanna.<br><br><br></p>
+    </div>
+    <ul>
+      <p>Some of the Cricket players from India are :</p>
+      <li onmouseover="changeColorAndFont(this, 'violet', 'bold')" onmouseout="changeColorAndFont(this, 'black', 'normal')">Sachin Tendulkar</li>
+      <li onmouseover="changeColorAndFont(this, 'indigo', 'bold')" onmouseout="changeColorAndFont(this, 'black', 'normal')">M S Dhoni</li>
+      <li onmouseover="changeColorAndFont(this, 'blue', 'bold')" onmouseout="changeColorAndFont(this, 'black', 'normal')">Rohit Sharma</li>
+      <li onmouseover="changeColorAndFont(this, 'green', 'bold')" onmouseout="changeColorAndFont(this, 'black', 'normal')">Shikhar dhawan</li>
+      <li onmouseover="changeColorAndFont(this, 'yellow', 'bold')" onmouseout="changeColorAndFont(this, 'black', 'normal')">Hardik Pandya</li>
+      <li onmouseover="changeColorAndFont(this, 'orange', 'bold')" onmouseout="changeColorAndFont(this, 'black', 'normal')">Jasprit Bumrah</li>
+      <li onmouseover="changeColorAndFont(this, 'red', 'bold')" onmouseout="changeColorAndFont(this, 'black', 'normal')">Shardhul Thankur</li>
+    </ul>
+    <button id="button_id" onmouseover="changeText('button_id', 'You hovered over me :)')" onmouseout="changeText('button_id', 'Hover over me!')">Hover me</button>
+    <input type="text" id="textbox_id" placeholder="Enter text here">
+    <button id="update_id" onclick="updateParagraph()">Update Paragraph</button>
+
+    <script>
+      function changeColor(elementId, color) {
+        const element = document.getElementById(elementId);
+        element.style.color = color;
+      }
+
+      function changeText(elementId, text) {
+        const element = document.getElementById(elementId);
+        element.innerHTML = text;
+      }
+
+      function changeColorAndFont(element, color, fontWeight) {
+        element.style.color = color;
+        element.style.fontWeight = fontWeight;
+      }
+
+      function updateParagraph() {
+        const myParagraph = document.getElementById("para_id");
+        const myTextbox = document.getElementById("textbox_id");
+        myParagraph.innerHTML = myTextbox.value;
+      }
+
+      const myButton = document.getElementById("button_id");
+
+      myButton.addEventListener("click", function() {
+        const myParagraph = document.getElementById("para_id");
+        const myTextbox = document.getElementById("textbox_id");
+        myParagraph.innerHTML = myTextbox.value;
+      });
+    </script>
+  </body>
+</html>

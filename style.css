@@ -1,0 +1,22 @@
+.container{
+    background-color:rgb(244, 240, 240);
+    width: 100%;
+    border-radius: 20px;
+}
+button{
+    background-color:darkgreen;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 15px;
+    border: none;
+}
+button:hover{
+    border-radius: 20px;
+    background-color:chocolate;
+}
+#textbox_id{
+    background-color: antiquewhite;
+    border-radius: 5px;
+    height: 35px;
+    border: none;
+}
